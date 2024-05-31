@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery selectors</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <style>
+      body {
+        font-size: 17px;
+        font-family: poppins;
+        background: #f4f4f4;
+        line-height: 1.5em;
+      }
+
+      header {
+        background: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 4px #000 solid;
+        margin-bottom: 10px;
+      }
+
+      #container {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>jQuery Crash course(selectors)</h1>
+    </header>
+    <div id="container">
+      <h2 class="heading1">Heading One: The Evolution of Music Streaming</h2>
+      <p>
+        <span>Music</span> streaming has revolutionized the way we consume music,
+        transitioning from MP3 downloads and CDs to platforms like Spotify and
+        Apple Music. These services offer instant access to vast libraries of
+        songs, enabling personalized listening experiences through advanced
+        algorithms and curated playlists. This shift has transformed the music
+        industry, making it easier for artists to reach global audiences and for
+        listeners to discover new music. As technology continues to advance, the
+        future of music streaming promises even more innovative features and
+        enhanced user experiences.
+      </p>
+
+      <h2 class="heading2">Heading Two: The Impact of Music on Mental Health</h2>
+      <p>
+        <span>Music</span> has a profound impact on mental health, offering a therapeutic
+        escape from stress and anxiety. Listening to music can release dopamine,
+        promoting feelings of happiness and relaxation. It serves as an
+        emotional outlet, helping individuals process and express their
+        feelings. Music therapy is widely used to support mental health in
+        clinical settings, aiding in the treatment of conditions like
+        depression, PTSD, and dementia. Incorporating music into daily life can
+        enhance emotional well-being and provide a sense of connection and
+        comfort.
+      </p>
+
+      <h2 class="heading3">Some Music Artists</h2>
+      <ul id="list">
+        <li>NF</li>
+        <li>J Cole</li>
+        <li>Kendrick Lamar</li>
+        <li>Imagine Dragons</li>
+        <li>Alicia Keys</li>
+        <li>Lucas Graham</li>
+        <li>Adele</li>
+      </ul>
+
+      <input type="text"/>
+      <input type="submit" value="submit"/>
+      <input type="button" value="button"/>
+
+      <a href="http://google.com">Google</a>
+      <a href="http://yahoo.com">Yahoo</a>
+    </div>
+    <script>
+        //using tags
+        //$('h1').hide();
+        //using classes
+        //$('.heading1').hide();
+        $('p span').css('color','red');
+
+        //targetting stuff
+        $('ul#list li:first').css('color', 'red');
+        $('ul#list li:last').css('color', 'green');
+        $('ul#list li:even').css('background-color', 'yellow');
+        $('ul#list li:odd').css('background','#cccccc');
+        $('ul#list li:nth-child(3n)').css('list-style','none');
+
+        //selecting elements by attribute
+        $('input[type="text"]').hide();
+        $('[href]').css('text-decoration', 'none');
+        $('[href]').css('color', 'red');
+        $('[href="http://yahoo.com"]').css('color','green');
+    </script>
+  </body>
+</html>
